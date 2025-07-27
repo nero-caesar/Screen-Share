@@ -1,0 +1,66 @@
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.text {
+  color: #374151;
+}
+
+/* Status types */
+.idle .dot {
+  background-color: #9ca3af;
+}
+
+.success .dot {
+  background-color: #10b981;
+}
+
+.success {
+  background-color: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.success .text {
+  color: #065f46;
+}
+
+.warning .dot {
+  background-color: #f59e0b;
+}
+
+.warning {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+}
+
+.warning .text {
+  color: #92400e;
+}
+
+.error .dot {
+  background-color: #ef4444;
+}
+
+.error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+}
+
+.error .text {
+  color: #991b1b;
+} 

@@ -1,0 +1,64 @@
+.container {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.codeContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.code {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  flex: 1;
+  text-align: center;
+  user-select: all;
+}
+
+.copyButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.copyButton:hover {
+  background-color: #2563eb;
+}
+
+.copyButton:active {
+  transform: translateY(1px);
+} 
