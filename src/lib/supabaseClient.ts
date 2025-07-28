@@ -3,6 +3,12 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
+console.log("Fetching room:", supabaseUrl, supabaseAnonKey)
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Supabase environment variables are not set!')
+}
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 // Database types for TypeScript support
@@ -58,3 +64,11 @@ export async function deleteRoom(roomId: string) {
     .delete()
     .eq('id', roomId)
 } 
+
+export async function getActiveRooms() {
+  return await supabase
+    .from('rooms')
+    .select('*')
+    .eq('is_active', true)
+    .order('created_at', { ascending: false })
+}
